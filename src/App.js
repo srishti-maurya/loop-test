@@ -1,5 +1,11 @@
-function App() {
-  return <div className="App">Hello World!</div>;
-}
+import { PageRoutes } from './routes/PageRoutes';
+import { Toaster } from 'react-hot-toast';
 
-export default App;
+export const App = () => {
+  return (
+    <>
+      <Toaster position="top-right" />
+      <PageRoutes />
+    </>
+  );
+};
