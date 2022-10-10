@@ -21,13 +21,13 @@ export const LoginForm = () => {
   const validate = (values) => {
     let errors = {};
     if (!values.username) {
-      errors.username = 'Cannot be blank';
+      errors.username = 'Username cannot be blank';
     } else if (values.username.length < 3) {
       errors.username = 'Username must be more than 3 characters';
     }
 
     if (!values.password) {
-      errors.password = 'Cannot be blank';
+      errors.password = 'Password cannot be blank';
     } else if (values.password.length < 4) {
       errors.password = 'Password must be more than 4 characters';
     }
