@@ -7,7 +7,6 @@ export const useData = () => useContext(DataContext);
 
 export function DataProvider({ children }) {
   const [cookies, setCookie] = useCookies();
-
   const [restaurants, setRestaurants] = useState([]);
   const [selectedRestaurantList, setSelectedRestaurantList] = useState(
     cookies.restaurant ? cookies.restaurant : []
@@ -19,7 +18,7 @@ export function DataProvider({ children }) {
     cookies.liked ? cookies.liked : []
   );
 
-  function getRestaurantList() {
+  const getRestaurantList = () => {
     const host = `https://api.airtable.com/`;
     const token = 'Bearer keyfXgn8PL6pB3x32';
 
@@ -38,7 +37,8 @@ export function DataProvider({ children }) {
         console.error('ERROR', error);
       }
     })();
-  }
+  };
+
   return (
     <DataContext.Provider
       value={{

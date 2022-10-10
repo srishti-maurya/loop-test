@@ -10,6 +10,7 @@ export const Maps = ({
   removeFromLiked,
 }) => {
   const location = useLocation();
+
   return (
     <div className="flex flex-col p-8 items-center bg-orange-200 my-2 rounded-md shadow-md">
       <iframe

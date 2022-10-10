@@ -22,7 +22,7 @@ export function AuthProvider({ children }) {
     localStorage.getItem('isLoggedIn') || false
   );
 
-  function getUsersList() {
+  const getUsersList = () => {
     const host = `https://api.airtable.com/`;
     const token = 'Bearer keyfXgn8PL6pB3x32';
     (async function () {
@@ -40,7 +40,7 @@ export function AuthProvider({ children }) {
         console.error('ERROR', error);
       }
     })();
-  }
+  };
 
   const loginHandler = () => {
     const matchFound = validUsers.find(
@@ -73,12 +73,12 @@ export function AuthProvider({ children }) {
   return (
     <AuthContext.Provider
       value={{
-        getUsersList,
-        loginHandler,
         isLoggedIn,
         formValues,
-        setFormValues,
         cookies,
+        getUsersList,
+        loginHandler,
+        setFormValues,
         setCookie,
         logoutHandler,
       }}

@@ -5,6 +5,7 @@ import { useAuth } from '../contexts/auth-context';
 
 export const Tabs = ({ onHome, onBookmark, onLiked }) => {
   const { logoutHandler } = useAuth();
+
   return (
     <div className="flex flex-col p-4 bg-orange-100 rounded-md shadow-md">
       <Link
@@ -51,5 +52,3 @@ export const Tabs = ({ onHome, onBookmark, onLiked }) => {
     </div>
   );
 };
-
-<p className="text-center font-black text-3xl py-24 text-orange-600">Home</p>;
