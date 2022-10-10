@@ -94,14 +94,20 @@ export const Home = () => {
             Add
           </button>
         </div>
-        {selectedRestaurantList.map((ele) => (
-          <Maps
-            key={ele.id}
-            element={ele}
-            addToBookmark={addToBookmark}
-            removeFromList={removeFromList}
-          />
-        ))}
+        {selectedRestaurantList.length < 1 ? (
+          <p className="text-center font-black text-xl mx-4 text-orange-600 my-8 py-2 ">
+            No restaurants added.
+          </p>
+        ) : (
+          selectedRestaurantList.map((ele) => (
+            <Maps
+              key={ele.id}
+              element={ele}
+              addToBookmark={addToBookmark}
+              removeFromList={removeFromList}
+            />
+          ))
+        )}
       </div>
     </div>
   );

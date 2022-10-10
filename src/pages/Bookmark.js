@@ -41,14 +41,20 @@ export const Bookmark = () => {
             alt="pancake"
             className="object-contain img-responsive h-32 my-10"
           />
-          {bookmarkList.map((ele) => (
-            <Maps
-              key={ele.id}
-              element={ele}
-              removeFromBookmark={removeFromBookmark}
-              addToLiked={addToLiked}
-            />
-          ))}
+          {bookmarkList.length < 1 ? (
+            <p className="text-center font-black text-xl mx-4 text-orange-600 my-8 py-2 ">
+              No bookmark added
+            </p>
+          ) : (
+            bookmarkList.map((ele) => (
+              <Maps
+                key={ele.id}
+                element={ele}
+                removeFromBookmark={removeFromBookmark}
+                addToLiked={addToLiked}
+              />
+            ))
+          )}
         </div>
       </div>
     </div>

@@ -23,13 +23,19 @@ export const Liked = () => {
             alt="pancake"
             className="object-contain img-responsive h-32 my-10"
           />
-          {likedList.map((ele) => (
-            <Maps
-              key={ele.id}
-              element={ele}
-              removeFromLiked={removeFromLiked}
-            />
-          ))}
+          {likedList.length < 1 ? (
+            <p className="text-center font-black text-xl mx-4 text-orange-600 my-8 py-2 ">
+              No liked restaurants
+            </p>
+          ) : (
+            likedList.map((ele) => (
+              <Maps
+                key={ele.id}
+                element={ele}
+                removeFromLiked={removeFromLiked}
+              />
+            ))
+          )}
         </div>
       </div>
     </div>
