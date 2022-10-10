@@ -48,7 +48,7 @@ export const LoginForm = () => {
       className="flex flex-col p-4 bg-orange-100 rounded-md shadow-md w-2/5"
     >
       <label
-        className="font-semibold text-base capitalize mb-2 text-orange-600"
+        className="font-semibold text-base capitalize mb-1 text-orange-600"
         htmlFor="username"
       >
         username
@@ -58,7 +58,7 @@ export const LoginForm = () => {
         name="username"
         id="username"
         placeholder="Enter username..."
-        className="p-1 rounded-md mb-2 text-orange-600 border-orange-600 border"
+        className="py-2 rounded-md text-orange-600 px-4 mb-3"
         value={formValues.username}
         onChange={handleChange}
       />
@@ -68,7 +68,7 @@ export const LoginForm = () => {
         </span>
       )}
       <label
-        className="font-semibold text-base capitalize mb-2 text-orange-600"
+        className="font-semibold text-base capitalize mb-1 text-orange-600"
         htmlFor="password"
       >
         Password
@@ -80,7 +80,7 @@ export const LoginForm = () => {
         value={formValues.password}
         onChange={handleChange}
         placeholder="Enter password..."
-        className="p-1 rounded-md text-orange-600 border-orange-600 border"
+        className="py-2 rounded-md text-orange-600 px-4"
         autoComplete="new-password"
       />
       {formErrors.password && (
@@ -90,7 +90,7 @@ export const LoginForm = () => {
       )}
       <button
         type="submit"
-        className="w-1/2 bg-orange-500 hover:bg-orange-600 text-orange-100 font-bold rounded-md m-auto h-8 my-2"
+        className="w-full bg-orange-500 hover:bg-orange-600 text-orange-100 font-bold rounded-md m-auto h-9 my-4"
       >
         Sign In
       </button>

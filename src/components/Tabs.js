@@ -10,7 +10,7 @@ export const Tabs = ({ onHome, onBookmark, onLiked }) => {
     <div className="flex flex-col p-4 bg-orange-100 rounded-md shadow-md">
       <Link
         to="/home"
-        className={`text-center font-black text-xl mx-4 text-orange-600 my-8 py-2 px-8 hover:bg-orange-200 hover:rounded-md hover:shadow-md ${
+        className={`text-left font-black text-xl mx-4 text-orange-600 my-8 py-2 px-8 hover:bg-orange-200 hover:rounded-md hover:shadow-md ${
           onHome ? 'bg-orange-200 rounded-md shadow-md' : ''
         }`}
       >
@@ -18,7 +18,7 @@ export const Tabs = ({ onHome, onBookmark, onLiked }) => {
       </Link>
       <Link
         to="/bookmark"
-        className={`text-center font-black text-xl mx-4 text-orange-600 py-2 px-8 hover:bg-orange-200 hover:rounded-md  hover:shadow-md
+        className={`text-left font-black text-xl mx-4 text-orange-600 py-2 px-8 hover:bg-orange-200 hover:rounded-md  hover:shadow-md
         ${onBookmark ? 'bg-orange-200 rounded-md shadow-md' : ''}
         `}
       >
@@ -26,7 +26,7 @@ export const Tabs = ({ onHome, onBookmark, onLiked }) => {
       </Link>
       <Link
         to="/liked"
-        className={`text-center font-black text-xl mx-4 text-orange-600 my-8 py-2 px-8 hover:bg-orange-200 hover:rounded-md hover:shadow-md ${
+        className={`text-left font-black text-xl mx-4 text-orange-600 my-8 py-2 px-8 hover:bg-orange-200 hover:rounded-md hover:shadow-md ${
           onLiked ? 'bg-orange-200 rounded-md shadow-md' : ''
         }`}
       >
@@ -44,7 +44,7 @@ export const Tabs = ({ onHome, onBookmark, onLiked }) => {
       />
       <p onClick={logoutHandler}>
         <Link
-          className={`text-center font-black text-xl mx-4 text-orange-600 my-8 py-2 px-8 hover:bg-orange-200 hover:rounded-md hover:shadow-md `}
+          className={`text-left font-black text-xl mx-4 text-orange-600 my-8 py-2 px-8 hover:bg-orange-200 hover:rounded-md hover:shadow-md `}
         >
           Log Out
         </Link>
