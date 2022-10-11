@@ -1,6 +1,6 @@
 ## Teach Stack
 
-- ReactJs, React Router v6, axios, react-cookie, react-hot-toast
+- ReactJs, React Router v6, axios, react-cookie, react-hot-toast, tailwind css
 
 ## Features
 
